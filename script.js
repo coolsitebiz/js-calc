@@ -31,3 +31,11 @@ function updateInput(e) {
     screenInput.textContent += e.textContent;
   }
 }
+
+function clearScreen() {
+  console.log("clearing");
+  input = 0;
+  output = 0;
+  screenInput.textContent = input;
+  screenOutput.textContent = output;
+}
