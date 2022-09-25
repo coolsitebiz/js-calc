@@ -1,5 +1,8 @@
 let input = 0;
 let output = 0;
+let term1 = "";
+let term2 = "";
+let operator = "";
 
 const screenInput = document.querySelector("#screenContentTop");
 const screenOutput = document.querySelector("#screenContentMain");
@@ -24,7 +27,6 @@ function updateInput(e) {
   if (input === 0) {
     input = e.textContent;
     screenInput.textContent = input;
-    console.log(input);
     return;
   } else {
     input += e.textContent;
@@ -46,25 +48,14 @@ function operate(operator, num1, num2) {
     case("-"):
       return subtract(num1, num2);
     case("*"):
-      return multiplay(num1, num2);
+      return multiply(num1, num2);
     case("/"):
       return divide(num1, num2);
   }
 
 }
 
-function add(num1, num2) {
-  return num1 + num2;
-}
-
-function subtract(num1, num2) {
-  return num1 - num2;
-}
-
-function multiplay(num1, num2) {
-  return num1 * num2;
-}
-
-function divide(num1, num2) {
-  return num1 / num2;
-}
+let add = (num1, num2) => { return num1 + num2 };
+let subtract = (num1, num2) => { return num1 - num2 };
+let multiply = (num1, num2) => { return num1 * num2 };
+let divide = (num1, num2) => { return num1 / num2 };
