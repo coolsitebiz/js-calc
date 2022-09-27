@@ -21,6 +21,42 @@
           <div id="keys">
             <div
               class="key"
+              id="clear"
+              data-type="clear"
+              data-value="clear"
+              onclick="clearScreen()"
+            >
+              C
+            </div>
+            <div
+              class="key"
+              id="clear"
+              data-type="clear"
+              data-value="clear"
+              onclick="clearScreen()"
+            >
+              +/-
+            </div>
+            <div
+              class="key"
+              id="clear"
+              data-type="clear"
+              data-value="clear"
+              onclick="clearScreen()"
+            >
+              %
+            </div>
+            <div
+              class="key"
+              id="divide"
+              data-type="operator"
+              data-value="/"
+              onclick="buildString(this)"
+            >
+              /
+            </div>
+            <div
+              class="key"
               id="seven"
               data-type="digit"
               data-value="7"
@@ -48,12 +84,12 @@
             </div>
             <div
               class="key"
-              id="divide"
+              id="multiply"
               data-type="operator"
-              data-value="/"
+              data-value="x"
               onclick="buildString(this)"
             >
-              /
+              x
             </div>
             <div
               class="key"
@@ -84,12 +120,12 @@
             </div>
             <div
               class="key"
-              id="multiply"
+              id="subtract"
               data-type="operator"
-              data-value="x"
+              data-value="-"
               onclick="buildString(this)"
             >
-              x
+              -
             </div>
             <div
               class="key"
@@ -120,21 +156,12 @@
             </div>
             <div
               class="key"
-              id="subtract"
+              id="add"
               data-type="operator"
-              data-value="-"
+              data-value="+"
               onclick="buildString(this)"
             >
-              -
-            </div>
-            <div
-              class="key"
-              id="clear"
-              data-type="clear"
-              data-value="clear"
-              onclick="clearScreen()"
-            >
-              C
+              +
             </div>
             <div
               class="key"
@@ -154,15 +181,7 @@
             >
               .
             </div>
-            <div
-              class="key"
-              id="add"
-              data-type="operator"
-              data-value="+"
-              onclick="buildString(this)"
-            >
-              +
-            </div>
+
             <div
               class="key equals"
               id="equals"

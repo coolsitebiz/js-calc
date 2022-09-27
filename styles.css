@@ -88,9 +88,9 @@
   cursor: pointer;
 }
 
-.equals {
+#zero {
   grid-column-start: 1;
-  grid-column-end: span 4;
+  grid-column-end: span 2;
 }
 
 .key:active {
