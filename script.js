@@ -1,8 +1,6 @@
 let input = 0;
 let output = 0;
-let term1 = "";
-let term2 = "";
-let operator = "";
+let done = false;
 
 const screenInput = document.querySelector("#screenContentTop");
 const screenOutput = document.querySelector("#screenContentMain");
@@ -23,39 +21,44 @@ const keyDivide = document.querySelector("#divide");
 const keyDecimal = document.querySelector("#decimal");
 const keyEquals = document.querySelector("#equals");
 
-function updateInput(e) {
+//change to output update
+/* function updateInput(e) {
   if (input === 0) {
-    input = e.textContent;
+    input = e.dataset.value;
     screenInput.textContent = input;
-    return;
   } else {
-    input += e.textContent;
-    screenInput.textContent += e.textContent;
+    input += e.dataset.value;
+    screenInput.textContent = input;
   }
-}
+} */
 
 function clearScreen() {
-  input = 0;
   output = 0;
-  screenInput.textContent = input;
-  screenOutput.textContent = output;
+  screenOutput.textContent = 0;
 }
 
 function operate(operator, num1, num2) {
-  switch(operator) {
-    case("+"):
+  switch (operator) {
+    case "+":
       return add(num1, num2);
-    case("-"):
+    case "-":
       return subtract(num1, num2);
-    case("*"):
+    case "*":
       return multiply(num1, num2);
-    case("/"):
+    case "/":
       return divide(num1, num2);
   }
-
 }
 
-let add = (num1, num2) => { return num1 + num2 };
-let subtract = (num1, num2) => { return num1 - num2 };
-let multiply = (num1, num2) => { return num1 * num2 };
-let divide = (num1, num2) => { return num1 / num2 };
+let add = (num1, num2) => {
+  return num1 + num2;
+};
+let subtract = (num1, num2) => {
+  return num1 - num2;
+};
+let multiply = (num1, num2) => {
+  return num1 * num2;
+};
+let divide = (num1, num2) => {
+  return num1 / num2;
+};

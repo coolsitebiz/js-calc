@@ -16,27 +16,160 @@
       <div id="outerContainer">
         <div id="innerContainer">
           <div id="screen">
-            <p id="screenContentTop">0</p>
-            <p id="screenContentMain">0</p>
+            <p id="screenContent">0</p>
           </div>
           <div id="keys">
-            <div class="key" id="seven" onclick="updateInput(this)">7</div>
-            <div class="key" id="8" onclick="updateInput(this)">8</div>
-            <div class="key" id="9" onclick="updateInput(this)">9</div>
-            <div class="key" id="divide" onclick="updateInput(this)">/</div>
-            <div class="key" id="4" onclick="updateInput(this)">4</div>
-            <div class="key" id="5" onclick="updateInput(this)">5</div>
-            <div class="key" id="6" onclick="updateInput(this)">6</div>
-            <div class="key" id="multiply" onclick="updateInput(this)">x</div>
-            <div class="key" id="1" onclick="updateInput(this)">1</div>
-            <div class="key" id="2" onclick="updateInput(this)">2</div>
-            <div class="key" id="3" onclick="updateInput(this)">3</div>
-            <div class="key" id="subtract" onclick="updateInput(this)">-</div>
-            <div class="key" id="clear" onclick="clearScreen()">C</div>
-            <div class="key" id="0" onclick="updateInput(this)">0</div>
-            <div class="key" id="decimal" onclick="updateInput(this)">.</div>
-            <div class="key" id="add" onclick="updateInput(this)">+</div>
-            <div class="key equals" id="equals" onclick="updateInput(this)">
+            <div
+              class="key"
+              id="seven"
+              data-type="digit"
+              data-value="7"
+              onclick="buildString(this)"
+            >
+              7
+            </div>
+            <div
+              class="key"
+              id="eight"
+              data-type="digit"
+              data-value="8"
+              onclick="buildString(this)"
+            >
+              8
+            </div>
+            <div
+              class="key"
+              id="nine"
+              data-type="digit"
+              data-value="9"
+              onclick="buildString(this)"
+            >
+              9
+            </div>
+            <div
+              class="key"
+              id="divide"
+              data-type="operator"
+              data-value="/"
+              onclick="buildString(this)"
+            >
+              /
+            </div>
+            <div
+              class="key"
+              id="four"
+              data-type="digit"
+              data-value="4"
+              onclick="buildString(this)"
+            >
+              4
+            </div>
+            <div
+              class="key"
+              id="five"
+              data-type="digit"
+              data-value="5"
+              onclick="buildString(this)"
+            >
+              5
+            </div>
+            <div
+              class="key"
+              id="6"
+              data-type="digit"
+              data-value="6"
+              onclick="buildString(this)"
+            >
+              6
+            </div>
+            <div
+              class="key"
+              id="multiply"
+              data-type="operator"
+              data-value="x"
+              onclick="buildString(this)"
+            >
+              x
+            </div>
+            <div
+              class="key"
+              id="one"
+              data-type="digit"
+              data-value="1"
+              onclick="buildString(this)"
+            >
+              1
+            </div>
+            <div
+              class="key"
+              id="two"
+              data-type="digit"
+              data-value="2"
+              onclick="buildString(this)"
+            >
+              2
+            </div>
+            <div
+              class="key"
+              id="three"
+              data-type="digit"
+              data-value="3"
+              onclick="buildString(this)"
+            >
+              3
+            </div>
+            <div
+              class="key"
+              id="subtract"
+              data-type="operator"
+              data-value="-"
+              onclick="buildString(this)"
+            >
+              -
+            </div>
+            <div
+              class="key"
+              id="clear"
+              data-type="clear"
+              data-value="clear"
+              onclick="clearScreen()"
+            >
+              C
+            </div>
+            <div
+              class="key"
+              id="zero"
+              data-type="digit"
+              data-value="0"
+              onclick="buildString(this)"
+            >
+              0
+            </div>
+            <div
+              class="key"
+              id="decimal"
+              data-type="operator"
+              data-value="."
+              onclick="buildString(this)"
+            >
+              .
+            </div>
+            <div
+              class="key"
+              id="add"
+              data-type="operator"
+              data-value="+"
+              onclick="buildString(this)"
+            >
+              +
+            </div>
+            <div
+              class="key equals"
+              id="equals"
+              data-type="equals"
+              data-value="="
+              onclick="buildString(this)"
+            >
               =
             </div>
           </div>

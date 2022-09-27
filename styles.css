@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 #main {
@@ -46,19 +47,18 @@
   padding: 3px;
 }
 
-#screenContentTop {
+#screenContent {
   text-align: right;
-}
-
-#screenContentMain {
-  text-align: right;
-  font-size: 2em;
+  font-size: 3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #keys {
   width: 80%;
   height: 65%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(143, 143, 143);
   border: 1px solid gray;
   border-radius: 5px;
   display: grid;
@@ -72,7 +72,16 @@
   border: 1px solid black;
   border-radius: 5px;
   margin: 2px;
-  background: linear-gradient(45deg, rgb(238, 137, 137), rgb(255, 208, 121), rgb(247, 247, 137), rgb(157, 250, 157), rgb(158, 202, 255), rgb(198, 119, 255), violet, red);
+  background: linear-gradient(
+    45deg,
+    rgb(238, 137, 137),
+    rgb(255, 208, 121),
+    rgb(247, 247, 137),
+    rgb(157, 250, 157),
+    rgb(158, 202, 255),
+    rgb(198, 119, 255),
+    rgb(250, 99, 99)
+  );
   font-weight: bold;
   font-size: 2em;
   user-select: none;
@@ -85,5 +94,14 @@
 }
 
 .key:active {
-  background: linear-gradient(-135deg, rgb(238, 137, 137), rgb(255, 208, 121), rgb(247, 247, 137), rgb(157, 250, 157), rgb(158, 202, 255), rgb(198, 119, 255), violet, red);
+  background: linear-gradient(
+    -135deg,
+    rgb(238, 137, 137),
+    rgb(255, 208, 121),
+    rgb(247, 247, 137),
+    rgb(157, 250, 157),
+    rgb(158, 202, 255),
+    rgb(198, 119, 255),
+    rgb(255, 125, 125)
+  );
 }
