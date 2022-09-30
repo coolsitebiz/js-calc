@@ -1,9 +1,11 @@
-let input = 0;
 let output = 0;
 let done = false;
+let num1 = 0;
+let num2 = 0;
+let operator = "";
+let curNum = num1;
 
-const screenInput = document.querySelector("#screenContentTop");
-const screenOutput = document.querySelector("#screenContentMain");
+const screenOutput = document.querySelector("#screenContent");
 const key1 = document.querySelector("#one");
 const key2 = document.querySelector("#two");
 const key3 = document.querySelector("#three");
@@ -32,8 +34,35 @@ const keyEquals = document.querySelector("#equals");
   }
 } */
 
+function setNum(num) {
+  let value = num.dataset.value;
+  if (curNum === 0) {
+    if (value === "0") {
+      return;
+    }
+    curNum = value;
+  } else {
+    curNum += value;
+  }
+  setDisplay(curNum);
+}
+
+function setDecimal() {
+  if (curNum.toString().includes(".")) {
+    return;
+  }
+  curNum += ".";
+  setDisplay(curNum);
+}
+
+function setDisplay(content) {
+  screenOutput.textContent = content;
+}
+
 function clearScreen() {
   output = 0;
+  num1 = 0;
+  curNum = num1;
   screenOutput.textContent = 0;
 }
 

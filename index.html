@@ -23,26 +23,26 @@
               class="key"
               id="clear"
               data-type="clear"
-              data-value="clear"
+              data-value="C"
               onclick="clearScreen()"
             >
               C
             </div>
             <div
               class="key"
-              id="clear"
-              data-type="clear"
-              data-value="clear"
-              onclick="clearScreen()"
+              id="neg"
+              data-type="modifier"
+              data-value="+/-"
+              onclick="negative()"
             >
               +/-
             </div>
             <div
               class="key"
-              id="clear"
-              data-type="clear"
-              data-value="clear"
-              onclick="clearScreen()"
+              id="percent"
+              data-type="modifier"
+              data-value="%"
+              onclick="percent()"
             >
               %
             </div>
@@ -51,7 +51,7 @@
               id="divide"
               data-type="operator"
               data-value="/"
-              onclick="buildString(this)"
+              onclick="setOperator(this)"
             >
               /
             </div>
@@ -60,7 +60,7 @@
               id="seven"
               data-type="digit"
               data-value="7"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               7
             </div>
@@ -69,7 +69,7 @@
               id="eight"
               data-type="digit"
               data-value="8"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               8
             </div>
@@ -78,7 +78,7 @@
               id="nine"
               data-type="digit"
               data-value="9"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               9
             </div>
@@ -87,7 +87,7 @@
               id="multiply"
               data-type="operator"
               data-value="x"
-              onclick="buildString(this)"
+              onclick="setOperator(this)"
             >
               x
             </div>
@@ -96,7 +96,7 @@
               id="four"
               data-type="digit"
               data-value="4"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               4
             </div>
@@ -105,7 +105,7 @@
               id="five"
               data-type="digit"
               data-value="5"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               5
             </div>
@@ -114,7 +114,7 @@
               id="6"
               data-type="digit"
               data-value="6"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               6
             </div>
@@ -123,7 +123,7 @@
               id="subtract"
               data-type="operator"
               data-value="-"
-              onclick="buildString(this)"
+              onclick="setOperator(this)"
             >
               -
             </div>
@@ -132,7 +132,7 @@
               id="one"
               data-type="digit"
               data-value="1"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               1
             </div>
@@ -141,7 +141,7 @@
               id="two"
               data-type="digit"
               data-value="2"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               2
             </div>
@@ -150,7 +150,7 @@
               id="three"
               data-type="digit"
               data-value="3"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               3
             </div>
@@ -159,7 +159,7 @@
               id="add"
               data-type="operator"
               data-value="+"
-              onclick="buildString(this)"
+              onclick="setOperator(this)"
             >
               +
             </div>
@@ -168,16 +168,16 @@
               id="zero"
               data-type="digit"
               data-value="0"
-              onclick="buildString(this)"
+              onclick="setNum(this)"
             >
               0
             </div>
             <div
               class="key"
               id="decimal"
-              data-type="operator"
+              data-type="decimal"
               data-value="."
-              onclick="buildString(this)"
+              onclick="setDecimal()"
             >
               .
             </div>
@@ -187,7 +187,7 @@
               id="equals"
               data-type="equals"
               data-value="="
-              onclick="buildString(this)"
+              onclick="calculate()"
             >
               =
             </div>
