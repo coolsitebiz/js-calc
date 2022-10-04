@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Calculator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" />
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Calculator</title>
-</head>
-
-<body>
-  <div id="main">
-    <div id="outerContainer">
-      <div id="innerContainer">
-        <div id="screen">
-          <p id="screenContent">0</p>
-        </div>
-        <div id="keys">
-          <div class="key clear" data-value="C">C</div>
-          <div class="key negative" data-value="+/-">+/-</div>
-          <div class="key percent" data-value="%">%</div>
-          <div class="key operator" data-value="/">/</div>
-          <div class="key number" data-value="7">7</div>
-          <div class="key number" data-value="8">8</div>
-          <div class="key number" data-value="9">9</div>
-          <div class="key operator" data-value="x">x</div>
-          <div class="key number" data-value="4">4</div>
-          <div class="key number" data-value="5">5</div>
-          <div class="key number" data-value="6">6</div>
-          <div class="key operator" data-value="-">-</div>
-          <div class="key number" data-value="1">1</div>
-          <div class="key number" data-value="2">2</div>
-          <div class="key number" data-value="3">3</div>
-          <div class="key operator" data-value="+">+</div>
-          <div class="key number zero" data-value="0">0</div>
-          <div class="key decimal" data-value=".">.</div>
-          <div class="key equals" data-value="=">=</div>
+  <body>
+    <div id="main">
+      <div id="outerContainer">
+        <div id="innerContainer">
+          <div id="screen">
+            <p id="screenContentTop">hello</p>
+            <p id="screenContentMain">hi there</p>
+          </div>
+          <div id="keys">
+            <div class="key clear" data-value="C">C</div>
+            <div class="key delete" data-value="del">DEL</div>
+            <div class="key negative" data-value="+/-">&#177;</div>
+            <div class="key operator" data-value="/">/</div>
+            <div class="key number" data-value="7">7</div>
+            <div class="key number" data-value="8">8</div>
+            <div class="key number" data-value="9">9</div>
+            <div class="key operator" data-value="x">x</div>
+            <div class="key number" data-value="4">4</div>
+            <div class="key number" data-value="5">5</div>
+            <div class="key number" data-value="6">6</div>
+            <div class="key operator" data-value="-">-</div>
+            <div class="key number" data-value="1">1</div>
+            <div class="key number" data-value="2">2</div>
+            <div class="key number" data-value="3">3</div>
+            <div class="key operator" data-value="+">+</div>
+            <div class="key number zero" data-value="0">0</div>
+            <div class="key number" data-value=".">.</div>
+            <div class="key equals" data-value="=">=</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./script.js" lang="javascript"></script>
-</body>
-
+    <script src="./script.js" lang="javascript"></script>
+  </body>
 </html>

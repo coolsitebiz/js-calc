@@ -45,13 +45,23 @@
   border-radius: 5px;
   margin: 40px;
   padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
-#screenContent {
-  text-align: right;
-  font-size: 3em;
-  text-overflow:ellipsis;
-  overflow:hidden;
+#screenContentTop {
+  font-size: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#screenContentMain {
+  font-size: 2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -83,7 +93,7 @@
     rgb(250, 99, 99)
   );
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   user-select: none;
   cursor: pointer;
 }
