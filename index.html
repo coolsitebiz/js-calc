@@ -1,200 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Orbitron"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Calculator</title>
-  </head>
-  <body>
-    <div id="main">
-      <div id="outerContainer">
-        <div id="innerContainer">
-          <div id="screen">
-            <p id="screenContent">0</p>
-          </div>
-          <div id="keys">
-            <div
-              class="key"
-              id="clear"
-              data-type="clear"
-              data-value="C"
-              onclick="clearScreen()"
-            >
-              C
-            </div>
-            <div
-              class="key"
-              id="neg"
-              data-type="modifier"
-              data-value="+/-"
-              onclick="negative()"
-            >
-              +/-
-            </div>
-            <div
-              class="key"
-              id="percent"
-              data-type="modifier"
-              data-value="%"
-              onclick="percent()"
-            >
-              %
-            </div>
-            <div
-              class="key"
-              id="divide"
-              data-type="operator"
-              data-value="/"
-              onclick="setOperator(this)"
-            >
-              /
-            </div>
-            <div
-              class="key"
-              id="seven"
-              data-type="digit"
-              data-value="7"
-              onclick="updateDisplay(this)"
-            >
-              7
-            </div>
-            <div
-              class="key"
-              id="eight"
-              data-type="digit"
-              data-value="8"
-              onclick="updateDisplay(this)"
-            >
-              8
-            </div>
-            <div
-              class="key"
-              id="nine"
-              data-type="digit"
-              data-value="9"
-              onclick="updateDisplay(this)"
-            >
-              9
-            </div>
-            <div
-              class="key"
-              id="multiply"
-              data-type="operator"
-              data-value="x"
-              onclick="setOperator(this)"
-            >
-              x
-            </div>
-            <div
-              class="key"
-              id="four"
-              data-type="digit"
-              data-value="4"
-              onclick="updateDisplay(this)"
-            >
-              4
-            </div>
-            <div
-              class="key"
-              id="five"
-              data-type="digit"
-              data-value="5"
-              onclick="updateDisplay(this)"
-            >
-              5
-            </div>
-            <div
-              class="key"
-              id="6"
-              data-type="digit"
-              data-value="6"
-              onclick="updateDisplay(this)"
-            >
-              6
-            </div>
-            <div
-              class="key"
-              id="subtract"
-              data-type="operator"
-              data-value="-"
-              onclick="setOperator(this)"
-            >
-              -
-            </div>
-            <div
-              class="key"
-              id="one"
-              data-type="digit"
-              data-value="1"
-              onclick="updateDisplay(this)"
-            >
-              1
-            </div>
-            <div
-              class="key"
-              id="two"
-              data-type="digit"
-              data-value="2"
-              onclick="updateDisplay(this)"
-            >
-              2
-            </div>
-            <div
-              class="key"
-              id="three"
-              data-type="digit"
-              data-value="3"
-              onclick="updateDisplay(this)"
-            >
-              3
-            </div>
-            <div
-              class="key"
-              id="add"
-              data-type="operator"
-              data-value="+"
-              onclick="setOperator(this)"
-            >
-              +
-            </div>
-            <div
-              class="key"
-              id="zero"
-              data-type="digit"
-              data-value="0"
-              onclick="updateDisplay(this)"
-            >
-              0
-            </div>
-            <div
-              class="key"
-              id="decimal"
-              data-type="decimal"
-              data-value="."
-              onclick="setDecimal()"
-            >
-              .
-            </div>
 
-            <div
-              class="key equals"
-              id="equals"
-              data-type="equals"
-              data-value="="
-              onclick="calculate()"
-            >
-              =
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="outerContainer">
+      <div id="innerContainer">
+        <div id="screen">
+          <p id="screenContent">0</p>
+        </div>
+        <div id="keys">
+          <div class="key clear" data-value="C">C</div>
+          <div class="key negative" data-value="+/-">+/-</div>
+          <div class="key percent" data-value="%">%</div>
+          <div class="key operator" data-value="/">/</div>
+          <div class="key number" data-value="7">7</div>
+          <div class="key number" data-value="8">8</div>
+          <div class="key number" data-value="9">9</div>
+          <div class="key operator" data-value="x">x</div>
+          <div class="key number" data-value="4">4</div>
+          <div class="key number" data-value="5">5</div>
+          <div class="key number" data-value="6">6</div>
+          <div class="key operator" data-value="-">-</div>
+          <div class="key number" data-value="1">1</div>
+          <div class="key number" data-value="2">2</div>
+          <div class="key number" data-value="3">3</div>
+          <div class="key operator" data-value="+">+</div>
+          <div class="key number zero" data-value="0">0</div>
+          <div class="key decimal" data-value=".">.</div>
+          <div class="key equals" data-value="=">=</div>
         </div>
       </div>
     </div>
-    <script src="./script.js" lang="javascript"></script>
-  </body>
+  </div>
+  <script src="./script.js" lang="javascript"></script>
+</body>
+
 </html>
