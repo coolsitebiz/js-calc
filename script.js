@@ -18,6 +18,11 @@ function updateCurTerm(number) {
   if (number == 0 && curTerm.toString().length == 0) {
     return;
   }
+  if (curTerm == 0) {
+    curTerm = number;
+    updateMain(curTerm);
+    return;
+  }
   curTerm += number;
   updateMain(curTerm);
   console.log(number);
@@ -61,11 +66,13 @@ function deleteLast() {
 }
 
 function equals() {
-
+  if (!curTerm || !prevTerm) {
+    return;
+  }
   //need to reset on input after displaying result
   result = operate(operator, prevTerm, curTerm);
   prevTerm = '';
-  curTerm = result;
+  curTerm = result.toString();
   operator = null;
   updateTop(prevTerm);
   updateMain(curTerm);
