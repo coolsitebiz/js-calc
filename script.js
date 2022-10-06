@@ -6,54 +6,89 @@ function clearScreen() {
   prevTerm = "";
   curTerm = "";
   operator = null;
-  //update display
+  updateMain(curTerm);
+  updateTop(prevTerm);
   return;
 }
 
 function updateCurTerm(number) {
-  //append digits to current term
-  //update display
+  if (number == "." && curTerm.toString().includes(".")) {
+    return;
+  }
+  if (number == 0 && curTerm.toString().length == 0) {
+    return;
+  }
+  curTerm += number;
+  updateMain(curTerm);
   console.log(number);
   return;
 }
 
-function setOperator(operator) {
-  //set operator
-  //move curTerm value to prevTerm
-  //update prevterm display to show operator
+function setOperator(op) {
+  if (!curTerm) {
+    return;
+  }
+  if (curTerm && prevTerm) {
+    result = operate(operator, prevTerm, curTerm);
+    operator = op;
+    prevTerm = result;
+    curTerm = '';
+    updateTop(`${prevTerm} ${operator}`);
+    updateMain(curTerm);
+    return;
+  }
+  operator = op;
+  prevTerm = curTerm;
+  curTerm = '';
+  updateTop(`${prevTerm} ${operator}`);
+  updateMain(curTerm);
   return;
 }
 
 function setNegative() {
+  if(curTerm.length === 0) return;
   curTerm = -curTerm + "";
-  //update
-  return;
+  updateMain(curTerm);
 }
 
 function deleteLast() {
+  if (!curTerm) {
+    return;
+  }
   curTerm = curTerm.slice(0, curTerm.length - 1);
-  //update
+  updateMain(curTerm);
   return;
 }
 
-function updateTop() {
-  return;
+function equals() {
+
+  //need to reset on input after displaying result
+  result = operate(operator, prevTerm, curTerm);
+  prevTerm = '';
+  curTerm = result;
+  operator = null;
+  updateTop(prevTerm);
+  updateMain(curTerm);
 }
 
-function updateMain() {
-  return;
+function updateTop(content) {
+  topDisplay.textContent = content;
+}
+
+function updateMain(content) {
+  mainDisplay.textContent = content;
 }
 
 function operate(operator, num1, num2) {
   switch (operator) {
     case "+":
-      return add(num1, num2);
+      return add(parseFloat(num1), parseFloat(num2));
     case "-":
-      return subtract(num1, num2);
+      return subtract(parseFloat(num1), parseFloat(num2));
     case "x":
-      return multiply(num1, num2);
+      return multiply(parseFloat(num1), parseFloat(num2));
     case "/":
-      return divide(num1, num2);
+      return divide(parseFloat(num1), parseFloat(num2));
   }
 }
 
@@ -85,6 +120,17 @@ numberKeys.forEach((numberKey) => {
     updateCurTerm(numberKey.dataset.value)
   );
 });
+
+operatorKeys.forEach(operatorKey => {
+  operatorKey.addEventListener("click", () => {
+    setOperator(operatorKey.dataset.value);
+  });
+});
+
+clearKey.addEventListener('click', clearScreen);
+negativeKey.addEventListener('click', setNegative);
+deleteKey.addEventListener('click', deleteLast);
+equalsKey.addEventListener('click', equals);
 
 mainDisplay.textContent = "";
 topDisplay.textContent = "";
