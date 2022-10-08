@@ -62,6 +62,11 @@ function deleteLast() {
   if (!curTerm) {
     return;
   }
+  if (complete) {
+    clearScreen();
+    complete = false;
+    return;
+  }
   curTerm = curTerm.slice(0, curTerm.length - 1);
   updateMain(curTerm);
   return;
