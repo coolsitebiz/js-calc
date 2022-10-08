@@ -53,16 +53,23 @@
 
 #screenContentTop {
   font-size: 1em;
-  text-overflow: ellipsis;
+  max-width: 290px;
   overflow: hidden;
-  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1em; /* a */
+  max-height: 2em;
 }
 
 #screenContentMain {
-  font-size: 2em;
-  text-overflow: ellipsis;
+  font-size: 1.2em;
   overflow: hidden;
-  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1em; /* a */
+  max-height: 2em;
+  max-width: 290px;
+
 }
 
 #keys {

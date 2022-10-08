@@ -1,6 +1,7 @@
 let prevTerm = "";
 let curTerm = "";
 let operator = null;
+let complete = false;
 
 function clearScreen() {
   prevTerm = "";
@@ -18,8 +19,9 @@ function updateCurTerm(number) {
   if (number == 0 && curTerm.toString().length == 0) {
     return;
   }
-  if (curTerm == 0) {
+  if (curTerm == 0 || complete === true) {
     curTerm = number;
+    complete = false;
     updateMain(curTerm);
     return;
   }
@@ -74,6 +76,7 @@ function equals() {
   prevTerm = '';
   curTerm = result.toString();
   operator = null;
+  complete = true;
   updateTop(prevTerm);
   updateMain(curTerm);
 }
